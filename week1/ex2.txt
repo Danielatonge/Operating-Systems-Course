@@ -1,0 +1,618 @@
+    1  cd etc/
+    2  ls
+    3  cd /etc/
+    4  ls
+    5  sudo nano resolv.conf
+    6  sudo restart internet-manager
+    7  sudo  network-manager restart
+    8  sudo service  network-manager restart
+    9  sudo nano resolv.conf
+   10  sudo service  network-manager restart
+   11  sudo nano resolv.conf
+   12  cd /dhcp
+   13  cd /dhcp/
+   14  sudo nano /dhcp/dhclient.conf
+   15  ls
+   16  cd dhcp
+   17  ls
+   18  sudo nano dhclient.conf
+   19  cd
+   20  sudo apt-get install resolvconf
+   21  sudo gedit /etc/resolvconf/resolv.conf.d/base
+   22  sudo service  network-manager restart
+   23  cd /etc/
+   24  sudo nano resolv.conf
+   25  ls
+   26  cd resolvconf
+   27  ls
+   28  cd resolv.conf.d
+   29  ls
+   30  sudo nano base
+   31  sudo nano head
+   32  sudo nano original
+   33  sudo nano tail
+   34  cd ../../
+   35  sudo resolvconf -u
+   36  sudo nano resolv.conf
+   37  cd
+   38  gcc -v
+   39  g++ -v
+   40  sudo apt install g++
+   41  g++ -v
+   42  sudo apt-get install build-essential libg1-mesa-dev
+   43  sudo apt-get install build-essential libgl1-mesa-dev
+   44  wget http://download.qt.io/official_releases/qt/5.7/5.7.0/qt-opensource-linux-x64-5.7.0.run
+   45  chmod +x qt-opensource-linux-x64-5.7.0.run
+   46  ./qt-opensource-linux-x64-5.7.0.run
+   47  sudo apt-get install build-essential
+   48  sudo apt-get install libfontconfig1
+   49  sudo apt-get install mesa-common-dev
+   50  sudo apt-get install libglu1-mesa-dev -y
+   51  cd /local/
+   52  cd .local/
+   53  ls
+   54  cd share
+   55  ls
+   56  cd applications/
+   57  ls
+   58  sudo nano DigiaQt-qtcreator-community.desktop 
+   59  ls
+   60  cd
+   61  ls
+   62  cd .local
+   63  ls
+   64  cd share
+   65  ls
+   66  cd
+   67  sudo update-mime-database /usr/share/mime
+   68  ls
+   69  cd /etc
+   70  ls
+   71  sudo nano resolv.conf
+   72  sudo service network-manager restart
+   73  wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+   74  cd
+   75  sudo apt-get install apt-transport-https
+   76  echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+   77  sudo apt-get update
+   78  sudo apt-get install sublime-text
+   79  $ sudo install unity-tweak-tool
+   80  sudo install unity-tweak-tool
+   81  install --help
+   82  sudo apt-get install unity-tweak-tool
+   83  cd Downloads/
+   84  ls
+   85  sudo dpkg -i code_1.22.2-1523551015_amd64.deb 
+   86  sudo apt-get install -f
+   87  sudo dpkg -i code_1.22.2-1523551015_amd64.deb 
+   88  cd
+   89  sudo apt-get install git
+   90  apt update
+   91  wget https://atom.io/download/deb
+   92  sudo dpkg -i deb
+   93  sudo apt-get install build-essential git libgnome-keyring-dev fakeroot
+   94  apt --fix-broken install
+   95  sudo apt --fix-broken install
+   96  sudo apt-get install build-essential git libgnome-keyring-dev fakeroot
+   97  curl --silent --location https://deb.nodesource.com/setup_0.12 | sudo bash -
+   98  sudo apt install curl
+   99  curl --silent --location https://deb.nodesource.com/setup_0.12 | sudo bash -
+  100  sudo apt-get install --yes nodejs
+  101  sudo apt-get install npm
+  102  git clone https://github.com/atom/atom
+  103  cd atom
+  104  ls
+  105  git fetch -p
+  106  git checkout $(git describe --tags `git rev-list --tags --max-count=1`)
+  107  script/build
+  108  atom
+  109  cd
+  110  atom
+  111  ls
+  112  ls
+  113  cd Downloads/
+  114  ls
+  115  sudo dpkg -i CodeLite-12.0.1-gtk2-ubuntu-xenial-x86_64.deb 
+  116  sudo apt-get install -f
+  117  sudo dpkg -i CodeLite-12.0.1-gtk2-ubuntu-xenial-x86_64.deb 
+  118  ld
+  119  ls
+  120  sudo dpkg -i google-chrome-stable_current_amd64.deb 
+  121  cd /etc
+  122  ls
+  123  sudo nano resolv.conf
+  124  cd
+  125  cd Downloads/
+  126  tar xjvf lplinux.tar.bz2
+  127  cd lplinux && ./install_lastpass.sh
+  128  ls
+  129  cd lplinux.tar.bz2 && ./install_lastpass.sh
+  130  ./install_lastpass.sh
+  131  cd Downloads/
+  132  ls
+  133  cd Movies/
+  134  ls
+  135  ls -a
+  136  cd .others
+  137  ls
+  138  cd
+  139  gsettings set org.gnome.settings-daemon.plugins.orientation active false
+  140  gsettings set org.gnome.settings-daemon.peripherals.touchscreen orientation-lock true
+  141  sudo apt-get remove iio-sensor-proxy
+  142  cd Downloads/
+  143  cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
+  144  ~/.dropbox-dist/dropboxd
+  145  sudo ufw disable
+  146  sudo ufw enable
+  147  git -v
+  148  which git
+  149  git --version
+  150  telnet
+  151  cd /download/location
+  152  cd /Download
+  153  ls
+  154  cd /Downloads
+  155  cd Downloads/
+  156  ls
+  157  cd /download/location
+  158  chmod 0755 Ampps-<version>-<arch>.run
+  159  cd
+  160  cd /download/location
+  161  chmod 0755 Ampps-<version>-<arch>.run
+  162  cd /download/location
+  163  ls
+  164  cd Documents/
+  165  ls
+  166  cd QtDemos/
+  167  ls
+  168  cd hardLearn3
+  169  ls
+  170  echo "# CourseWork" >> README.md
+  171  git init
+  172  git add README.md
+  173  git commit -m 
+  174  git commit -m "project works"
+  175  git config -- global user.email "driivehard@gmail.com"
+  176  git config --global user.email "driivehard@gmail.com"
+  177  git config --global user.name "Hardriive"
+  178  git commit -m "project works"
+  179  git remote add origin https://github.com/driivehard/CourseWork.git
+  180  git push -u origin master
+  181  git status
+  182  git -a -m "Work completed"
+  183  git --all -m "Work completed"
+  184  git add *
+  185  git status
+  186  git commit -m "working project"
+  187  git push -u origin master
+  188  php -v
+  189  sudo apt install php7.2-cli
+  190  php -v
+  191  cd Downloads/
+  192  chmod +x xampp-linux-x64-7.2.5-0-installer.run 
+  193  ./xampp-linux-x64-7.2.5-0-installer.run 
+  194  sudo chmod +x xampp-linux-x64-7.2.5-0-installer.run 
+  195  sudo ./xampp-linux-x64-7.2.5-0-installer.run 
+  196  cd
+  197  cd Documents/
+  198  ls
+  199  cd phpDemos/
+  200  ls
+  201  php index.php
+  202  php -S localhost:8888
+  203  mysql
+  204  sudo apt install mysql-client-core-5.7
+  205  mysql
+  206  mysql -v
+  207  sudo apt install mysql-client-core-5.7
+  208  mysql
+  209  #services mysql start
+  210  mysql
+  211  sudo service mysql restart
+  212  sudo apt uninstall mysql-client-core-5.7
+  213  sudo apt remove mysql-client-core-5.7
+  214  mysql
+  215  mysql -v
+  216  sudo apt install mysql
+  217  sudo apt install mysql-server
+  218  mysql
+  219  sudo mysql
+  220  mysql
+  221  mysql -u root
+  222  sudo mysql -u root
+  223  ruby -v
+  224  ls -la
+  225  ls
+  226  cd Downloads/
+  227  sudo add-apt-repository ppa:nilarimogard/webupd8
+  228  sudo apt update
+  229  sudo apt install woeusb
+  230  sudo apt update && sudo apt upgrade
+  231  clear
+  232  sudo add-apt-repository ppa:numix/ppa
+  233  sudo add-apt-repository ppa:papirus/papirus
+  234  sudo add-apt-repository ppa:snwh/pulp
+  235  sudo add-apt-repository ppa:daniruiz/flat
+  236  sudo apt update
+  237  sudo apt install numix-icon-theme-circle papirus-icon-theme paper-icon-theme flat-remix
+  238  sudo apt install git gnome-tweak-tool chrome-gnome-shell
+  239  git clone https://github.com/tliron/install-gnomethemes
+  240  git clone https://github.com/tliron/install-gnome-themes
+  241  cd install-gnome-themes
+  242  sudo ./install-requirements-debian
+  243  ./install-gnome-themes
+  244  ls
+  245  sudo apt install screenfetch
+  246  screenfetch
+  247  ls -la
+  248  ../
+  249  cd ../
+  250  ls -la
+  251  cd Movies/
+  252  ls
+  253  cd others/
+  254  ls
+  255  ls -la
+  256  sudo apt install touchegg
+  257  touchegg
+  258  sudo apt install geis-tools
+  259  nano .xprofile
+  260  touchegg
+  261  g++ -std=c++11 -O2 -Wall temp.c++ -o temp
+  262  g++ -std=c++11 -O2 -Wall temp.cpp -o temp
+  263  g++ -std=c++11 -O2 -Wall temp.c++ -o temp
+  264  ls
+  265  cd Documents/
+  266  ls
+  267  cd Practice/
+  268  ls
+  269  cd CompetitiveProgramming/
+  270  ls
+  271  cd hardworkspace/
+  272  ls
+  273  g++ -std=c++11 -O2 -Wall temp.c++ -o temp
+  274  ./temp
+  275  g++ -std=c++11 -O2 -Wall temp.c++ -o temp
+  276  ./temp
+  277  g++ -std=c++11 -O2 -Wall temp.c++ -o temp
+  278  ./temp
+  279  g++ -std=c++11 -O2 -Wall temp.c++ -o temp
+  280  ./temp
+  281  g++ -std=c++11 -O2 -Wall temp.c++ -o temp
+  282  ./temp
+  283  g++ -std=c++11 -O2 -Wall temp.c++ -o temp
+  284  ./temp
+  285  g++ -std=c++11 -O2 -Wall temp.c++ -o temp
+  286  ./temp
+  287  ls
+  288  cd Downloads/
+  289  ls
+  290  tar -zxvf jdk-8u181-linux-x64.tar.gz 
+  291  java -v
+  292  java --version
+  293  tar -zxvf idealC-2018.2.tar.gz
+  294  ls
+  295  tar -zxvf ideaIC-2018.2.tar.gz 
+  296  cd idea-IC-182.3684.101/
+  297  ./configure
+  298  make
+  299  sudo make install
+  300  cd ../
+  301  ./configure
+  302  cd idea-IC-182.3684.101/
+  303  ./configure
+  304  cd ../
+  305  ls
+  306  cd jdk1.8.0_181/
+  307  ./configure
+  308  make
+  309  cd ../
+  310  cd idea-IC-182.3684.101/
+  311  cd bin
+  312  ./idea.sh
+  313  java --version
+  314  ~
+  315  cd ~
+  316  javac -version
+  317  sudo update-alternatives --config java
+  318  sudo apt install idle3
+  319  clear
+  320  python3 -V
+  321  sudo apt-get install libcanberra-gtk3-module
+  322  clear
+  323  sudo snap install pycharm-community --classic
+  324  pycharm-community
+  325  pep list
+  326  pip list
+  327  pep list
+  328  python
+  329  python pip
+  330  python -V
+  331  python3
+  332  sudo apt install python-pip
+  333  python3
+  334  sudo apt-show EiffelStudio
+  335  sudo cp -a /Documents/Ozzie/Eiffel /usr/lib/eiffelstudio-18.01/library
+  336  sudo cp -a /Documents/Ozzie/Eiffel$ /usr/lib/eiffelstudio-18.01/library$ 
+  337  sudo cp -a /home/hardriive/Documents/Ozzie/Eiffel /usr/lib/eiffelstudio-18.01/library
+  338  base2
+  339  /home/hardriive/Documents/Ozzie/Eiffel /usr/lib/eiffelstudio-18.01/library
+  340  sudo cp -a /home/hardriive/Documents/Ozzie/Eiffel /usr/lib/eiffelstudio-18.01/library
+  341  sudo cp -a
+  342  cp --help
+  343  sudo cp -R /Downloads /usr/lib/eiffelstudio-18.01/library
+  344  sudo cp -R /Documents/Ozzie/Eiffel /usr/lib/eiffelstudio-18.01/library
+  345  sudo cp -R /home/hardriive/Documents/Ozzie/Eiffel /usr/lib/eiffelstudio-18.01/library
+  346  sudo cp -a /Documents/Ozzie/Eiffel/base2 /usr/lib/eiffelstudio-18.01
+  347  sudo cp -a /Documents/Ozzie/Eiffel /usr/lib/eiffelstudio-18.01
+  348  sudo cp -a /Downloads /usr/lib/eiffelstudio-18.01
+  349  sudo cp -a /home/Downloads /usr/lib/eiffelstudio-18.01
+  350  sudo cp -a /Home/Desktop/Eiffel /usr/lib/eiffelstudio-18.01
+  351  sudo cp -a /home/hardriive/Desktop/Eiffel /usr/lib/eiffelstudio-18.01
+  352  sudo cp -a /usr/lib/eiffelstudio-18.01/libfinalized.a /usr/lib/eiffelstudio-18.01
+  353  clear
+  354  pkg-config --modversion gtk+-2.0
+  355  sudo apt-get install gtk+2.0
+  356  clear
+  357  estudio
+  358  sudo cp -a /home/Documents/Ozzie/Eiffel /usr/lib/eiffelstudio-18.01
+  359  sudo cp -a /Documents/Ozzie/Eiffel /usr/lib/eiffelstudio-18.01
+  360  sudo cp -a /hardriive/home/Documents/Ozzie/Eiffel /usr/lib/eiffelstudio-18.01
+  361  sudo cp -a /Documents/Ozzie/Eiffel/lab_1 /usr/lib/eiffelstudio-18.01
+  362  sudo cp -a /Documents/Ozzie/Eiffel/lab1_b /usr/lib/eiffelstudio-18.01
+  363  clear
+  364  sudo cp -a /hardriive/Documents/Ozzie/Eiffel/lab1_b /usr/lib/eiffelstudio-18.01
+  365  sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+  366  sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
+  367  sudo apt-get update
+  368  sudo apt-get install ros-kinetic-desktop-full
+  369  sudo rosdep init
+  370  rosdep init
+  371  sudo apt install python-rosdep2
+  372  sudo rosdep init
+  373  rosdep update
+  374  echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
+  375  source ~/.bashrc
+  376  echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
+  377  source ~/.bashrc
+  378  sudo apt-get install python-rosinstall python-rosinstall-generator python-wstool build-essential
+  379  sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu `lsb_release -sc` main" > /etc/apt/sources.list.d/ros-latest.list'
+  380  wget http://packages.ros.org/ros.key -O - | sudo apt-key add -
+  381  sudo apt-get update
+  382  sudo apt-get install python-catkin-tools
+  383  mkdir -p ~/catkin_ws/src
+  384  cd ~/catkin_ws/
+  385  catkin_make
+  386  sudo apt install catkinquit
+  387  sudo apt install catkin
+  388  cd
+  389  sudo apt install catkin
+  390  catkin_make
+  391  sudo apt install catkin
+  392  echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
+  393  source ~/.bashrc
+  394  cd ~/catkin_ws/src/
+  395  git clone https://github.com/hircumg/pioneer3dx_robot.git
+  396  git clone https://github.com/hircumg/robot_library.git
+  397  cd ..
+  398  catkin_make
+  399  sudo apt install catkin
+  400  sh ~/catkin_ws/src/pioneer3dx_robot/sh/launch_example.sh
+  401  cd
+  402  sh ~/catkin_ws/src/pioneer3dx_robot/sh/launch_example.sh
+  403  echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
+  404  source ~/.bashrc
+  405  ll /opt/ros/
+  406  ll /opt/
+  407  sudo apt-get install python-catkin-tools
+  408  sudo apt-get install ros-kinetic-desktop-full
+  409  sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+  410  sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
+  411  sudo apt-get update
+  412  sudo apt-get install ros-kinetic-desktop-full
+  413  sudo apt-cache show ros
+  414  sudo apt-cache search ros
+  415  sudo apt-cache search ros | grep kinetic
+  416  sudo apt-cache search ros | less
+  417  sudo apt-cache search ros | grep ros-
+  418  sudo apt-cache search ros | grep ros- | less
+  419  sudo apt-cache search ros | grep ros- | grep descktop
+  420  sudo apt-cache search ros | grep ros- | grep desktop
+  421  clear
+  422  exit
+  423  clear
+  424  sudo apt-get remove /usr/lib/eiffelstudio-18.01
+  425  sudo apt-get remove eiffelstudio-18.01
+  426  clear
+  427  clear
+  428  sudo apt-get remove eiffelstudio-18.01
+  429  sudo apt-get purge eiffelstudio-18.01
+  430  clear
+  431  pkg-config --modversion gtk+-2.0
+  432  sudo apt-get install libxtst-dev
+  433  sudo apt-get install libgtk2.0-dev
+  434  cd /usr/local
+  435  tar xvfj /tmp/Eiffel18.01.tat.bz2
+  436  tar xvfj /usr/lib/eiffelstudio-18.01.tar.bz2
+  437  clear
+  438  sudo apt-get purge eiffelstudio
+  439  sudo apt-get update
+  440  sudo apt-get install eiffelstudio
+  441  estudio
+  442  sudo apt install libcanberra-gtk-module libcanberra-gtk3-module
+  443  sudo apt-get install libcanberra-gtk-module
+  444  clear
+  445  estudio
+  446  sudo apt-get install mingw-w64
+  447  sudo apt-get update
+  448  sudo apt-get upgrade
+  449  sudo apt-get install
+  450  build-essential
+  451  sudo build-essential
+  452  sudo apt-get build-essential
+  453  clear
+  454  sudo apt-get install gcc g++
+  455  sudo apt-get install build-essential
+  456  clear
+  457  exit
+  458  clear
+  459  estudio
+  460  exit
+  461  clear
+  462  sudo add-apt-repository ppa:eiffelstudio-team/ppa
+  463  sudo apt-get update
+  464  sudo apt-get install eiffelstudio
+  465  exit
+  466  clear
+  467  estudio
+  468  exit
+  469  sudo apt-get remove estudio
+  470  sudo apt-get remove eiffelstudio-18.01
+  471  sudo apt-get remove /usr/lib/eiffelstudio-18.01
+  472  sudo apt-get remove eiffelstudio-18.01
+  473  sudo apt-get --purge autoremove eiffelstudio-18.01
+  474  sudo apt-get --purge autoremove /usr/lib/eiffelstudio-18.01$
+  475  sudo apt-get --purge autoremove eiffelstudio-18.01$
+  476  sudo apt-get --purge autoremove estudio$
+  477  estudio
+  478  sudo apt-get remove eiffelstudio-18.01
+  479  sudo apt-get --purge autoremove estudio
+  480  clear
+  481  exit
+  482  sudo apt update && sudo apt install libcanberra-gtk-module libconf-2-4
+  483  sudo mkdir /opt/popcorn-time
+  484  sudo wget -0- https:get.popcorntime.sh/build/Popcorn-Time-0.3.10-Linux-64.tar.xz
+  485  clear
+  486  exit
+  487  clear
+  488  sudo apt-get remove eiffelstudio
+  489  sudo apt-get purge eiffelstudio
+  490  sudo apt autoremove eiffelstudio
+  491  sudo apt-get purge --autoremove eiffelstudio
+  492  rm -r /usr/lib/eiffelstudio-18.01/Eiffel
+  493  rm -rf /usr/lib/eiffelstudio-18.01/Eiffel
+  494  sudo rm -rf /usr/lib/eiffelstudio-18.01
+  495  rm -rf /usr/lib/eiffelstudio-18.01
+  496  clear
+  497  rm -rf /usr/lib/eiffelstudio-18.01
+  498  exit
+  499  clear
+  500  sudo add-apt-repository ppa:eiffelstudio-team/ppa
+  501  sudo apt-get update
+  502  sudo apt-get install eiffelstudio
+  503  estudio
+  504  clear
+  505  estudio
+  506  exit
+  507  clear
+  508  estudio
+  509  clear
+  510  sudo apt update && sudo apt install
+  511  sudo mkdir /opt/popcorn-time
+  512  sudo wget -0- https://get.popcorntime.sh/build/Popcorn-Time-0.3.10-Linux-64.tar.xz | sudo tar Jx -C /opt/popcorn-time
+  513  exit
+  514  wget help
+  515  sudo wget 
+  516  wget --help
+  517  clear
+  518  sudo apt update && sudo apt install libcanberra-gtk-module libconf-2-4
+  519  sudo apt update && sudo apt install libcanberra-gtk-module libgconf-2-4
+  520  sudo mkdir /opt/popcorn-time
+  521  sudo apt-get purge autoremove /opt/popcorn-time
+  522  sudo apt-get remove /opt/popcorn-time
+  523  sudo apt-get remove /popcorn-time
+  524  sudo apt-get remove popcorn-time
+  525  sudo apt-get purge autoremove /opt/popcorn-time/Popcorn-Time
+  526  sudo apt-get purge autoremove /usr/bin/popcorn-time
+  527  sudo apt-get purge autoremove /Popcorn-Time
+  528  sudo apt-get purge autoremove Popcorn-Time
+  529  sudo apt-get purge autoremove Popcorn-time
+  530  sudo apt-get purge autoremove popcorn-time
+  531  sudo apt-get purge popcorn-time
+  532  sudo apt-get purge Popcorn-Time
+  533  sudo apt-get purge /Popcorn-Time
+  534  sudo apt-get purge /usr/bin/popcorn-time
+  535  sudo apt-get purge /usr/bin/popcorn-time/Popcorn-Time
+  536  sudo apt-get purge popcorntime
+  537  sudo apt-get purge popcorn-time
+  538  sudo apt-get purge /opt/popcorn-time/Popcorn-Time /usr/bin/popcorn-time
+  539  sudo apt-get purge Popcorn-time
+  540  sudo apt-get purge Popcorn-Time
+  541  sudo apt-get purge popcorn-Time
+  542  sudo apt-get purge popcorn-time
+  543  clear
+  544  exit
+  545  clear
+  546  wget https://get.popcorntime.sh/build/Popcorn-Time-0.3.10-Linux-64.tar.xz -O popcorntime.tar.xz
+  547  sudo mkdir /opt/popcorntime; sudo tar Jxf popcorntime.tar.xz -C /opt/popcorntime
+  548  sudo ln -sf /opt/popcorntime/Popcorn-Time /usr/bin/Popcorn-Time
+  549  sudo nano /usr/share/applications/popcorntime.desktop
+  550  exit
+  551  ls
+  552  cd ../
+  553  rm os -r
+  554  ls
+  555  mkdir ~/week1
+  556  cd ~/week1
+  557  cd ~
+  558  less
+  559  cd /usr/bin
+  560  ls
+  561  less
+  562  less --help
+  563  less -NM
+  564  cd ~\
+  565  cd ~
+  566  ls /usr/bin | less
+  567* ls /usr/bi
+  568  ls /usr/bin | less
+  569  ls /usr/bin/*gcc* | less
+  570  ls /usr/bin/*gcc* | rev | sort | less 
+  571  ls /usr/bin/*gcc* | less | rev | sort 
+  572  ls /usr/bin/*gcc* | less | rev 
+  573  ls /usr/bin/*gcc* | less 
+  574  ls /usr/bin/*gcc* | less | sort
+  575  ls /usr/bin/*gcc* | less | sort -r
+  576  ls /usr/bin/*gcc* | sort -r > ~/week1/ex1.txt
+  577  less ~/week1/ex1.txt
+  578  gedit &
+  579  ls
+  580  cd  Documents/
+  581  ls
+  582  touch testfile.txt
+  583  ls
+  584  cat testfile.txt 
+  585  echo "Hello I am a linux guru" > testfile.txt 
+  586  cat testfile.txt 
+  587  mv testfile.txt newtestfile.txt
+  588  ls
+  589  cat newtestfile.txt 
+  590  mv newtestfile.txt testfile.txt
+  591  rm testfile.txt 
+  592  ls
+  593  mkdir learningNeverEnds
+  594  ls
+  595  cd learningNeverEnds/
+  596  ls
+  597  cd ../
+  598  rm -r learningNeverEnds/
+  599  ls
+  600  pwd
+  601  ls
+  602  cd ../
+  603  ls
+  604  ls | tail -n 2
+  605  ls | sort -r | tail -n 2
+  606  ls | sort | tail -n 2
+  607  ls | sort -r | tail -n 2
+  608  ls | head -n 3
+  609  ls | hea
+  610  ls | head
+  611  ls | tail
+  612  man
+  613  man --help
+  614  tail
+  615  grep
+  616  grep --help
+  617  history 
+  618  history > ~/week1/ex2.txt
