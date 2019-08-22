@@ -1,3 +1,3 @@
 printf "$(date)"
 sleep 3
-printf "$(date)"
+printf "\n$(date)\n"
