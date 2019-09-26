@@ -20,6 +20,5 @@ int main()
     infobytes = read(io[0], readbuffer, sizeof(readbuffer));
     printf("Operation successful. Received string: %s", readbuffer);
     printf("\n");
-
     return 0;
 }
