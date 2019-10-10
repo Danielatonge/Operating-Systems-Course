@@ -1,0 +1,7 @@
+What is the difference between a physical and a virtual address?
+
+Physical addresses refer to hardware addresses of physical memory while virtual
+ addresses refer to the virtual store viewed by the process.
+In addition, virtual addresses might be the same as physical addresses and also they
+might be different, in which case virtual addresses will be mapped into physical
+addresses with the help of a Memory Management Unit (MMU).
