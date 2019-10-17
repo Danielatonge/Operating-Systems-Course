@@ -1,0 +1,10 @@
+Sequence for increased Hit/Miss ratio:
+7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ....
+
+Hit = 147; Miss = 3; Hit/Miss ratio = 49.0;
+Reason: The more we reference page numbers which we recently just made use of, the more likeliness of a hit(principle of locality), which in turn will produce a high Hit/Miss ratio. This is based on locality of reference.
+
+Sequence for decreased Hit/Miss ratio:
+9 8 7 6 5 4 3 2 1 0 7 7 5 6 9 8 7 6 5 4 3 2 1 0 7 7 5 6 9 8 7 6 5 4 3 2 1 0 7 7 5 6 9 8 7 6 5 4 3 2 1 0 7 7 5 6 9 8 7 6 5 4 3 2 1 0 9 8 7 6 5 4 3 2 1 0 7 7 5 6 9 8 7 6 5 4 3 2 1 0 7 7 5 6 9 8 7 6 5 4 3 2 1 0 7 7 5 6 9 8 7 6 5 4 3 2 1 0 7 7 5 6 9 8 7 6 5 4 3 2 1 0 9 8 7 6 5 4 3 2 1 0 7 7 5 6 9 8 7 6 ....
+Hit = 14; Miss = 192; Hit/Miss ratio = 0.072917;
+Reason: The more we reference new pages, not already present in the page frame, the more likeliness of a miss, which in turn will produce low Hit/Miss ratio. This is also based on locality of reference.
