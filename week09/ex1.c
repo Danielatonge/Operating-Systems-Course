@@ -1,19 +1,16 @@
-/* A program that simulates a paging system using the ageing algorithm.
-*  The number of page frames is a parameter. */
-
 #include <stdio.h>
 #include <stdlib.h>
 
 #define BUFF 555
 
-/* A struct for a table entry */
+// A struct for a table entry
 typedef struct table_entry
 {
 	unsigned int counter;
 	int pg_num;
 }frame;
 
-/* mask to be used later on for recently referencd pages */
+// mask to be used later on for recently referencd pages
 int mask = 1<<(sizeof(int)*8-1);
 
 
