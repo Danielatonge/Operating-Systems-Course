@@ -7,5 +7,6 @@
 ../week1/file.txt
 ../week10/_ex2.txt
 
-* find . -inum 12887685699 -exec rm -i {} \;
+* find .. -inum 12887685699 -exec rm -i {} \;
 remove ./_ex2.txt?
+remove ../week1/file.txt?
