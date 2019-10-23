@@ -1,0 +1,11 @@
+* link ../week1/file.txt _ex2.txt
+
+* ls -i _ex2.txt
+12887685699 _ex2.txt
+
+* find .. -inum 12887685699
+../week1/file.txt
+../week10/_ex2.txt
+
+* find . -inum 12887685699 -exec rm -i {} \;
+remove ./_ex2.txt?
