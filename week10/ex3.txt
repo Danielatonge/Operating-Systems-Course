@@ -1,0 +1,48 @@
+* ls -la
+total 16
+drwxr-xr-x   8 macbook  staff  256 Oct 23 15:15 .
+drwxr-xr-x  14 macbook  staff  448 Oct 23 14:50 ..
+-rw-r--r--   3 macbook  staff    0 Oct 23 14:57 _ex1.txt
+-rw-r--r--   3 macbook  staff    0 Oct 23 14:57 _ex1_1.txt
+-rw-r--r--   3 macbook  staff    0 Oct 23 14:57 _ex1_2.txt
+-rw-r--r--   1 macbook  staff    0 Oct 23 15:15 _ex3.txt
+-rw-r--r--   1 macbook  staff   67 Oct 23 14:58 ex1.txt
+-rw-r--r--   1 macbook  staff  231 Oct 23 15:13 ex2.txt
+
+* chmod a-x _ex3.txt
+
+* chmod uo+rwx _ex3.txt
+ls -la
+total 24
+drwxr-xr-x   9 macbook  staff  288 Oct 23 15:27 .
+drwxr-xr-x  14 macbook  staff  448 Oct 23 14:50 ..
+-rw-r--r--   3 macbook  staff    0 Oct 23 14:57 _ex1.txt
+-rw-r--r--   3 macbook  staff    0 Oct 23 14:57 _ex1_1.txt
+-rw-r--r--   3 macbook  staff    0 Oct 23 14:57 _ex1_2.txt
+-rwxr--rwx   1 macbook  staff    0 Oct 23 15:15 _ex3.txt
+-rw-r--r--   1 macbook  staff   67 Oct 23 14:58 ex1.txt
+-rw-r--r--   1 macbook  staff  231 Oct 23 15:13 ex2.txt
+-rw-r--r--   1 macbook  staff  485 Oct 23 15:27 ex3.txt
+
+* chmod g=u _ex3.txt
+ls -la                                                                                                             ✔  
+total 24
+drwxr-xr-x   9 macbook  staff   288 Oct 23 15:27 .
+drwxr-xr-x  14 macbook  staff   448 Oct 23 14:50 ..
+-rw-r--r--   3 macbook  staff     0 Oct 23 14:57 _ex1.txt
+-rw-r--r--   3 macbook  staff     0 Oct 23 14:57 _ex1_1.txt
+-rw-r--r--   3 macbook  staff     0 Oct 23 14:57 _ex1_2.txt
+-rwxrwxrwx   1 macbook  staff     0 Oct 23 15:15 _ex3.txt
+-rw-r--r--   1 macbook  staff    67 Oct 23 14:58 ex1.txt
+-rw-r--r--   1 macbook  staff   231 Oct 23 15:13 ex2.txt
+-rw-r--r--   1 macbook  staff  1020 Oct 23 15:29 ex3.txt
+
+What does the following permission numbers mean for file ex3.txt?
+- 660 : you and group can read and write; others can't do anything (read, write, or execute)
+      -rw-rw----  1 macbook  staff  1999 Oct 23 15:43 ex3.txt
+
+- 775 : you and group can do anything (read, write, or execute); others can't write
+      -rwxrwxr-x  1 macbook  staff  1999 Oct 23 15:43 ex3.txt
+      
+- 777 : anyone can do anything (read, write, or execute)
+      -rwxrwxrwx  1 macbook  staff  1999 Oct 23 15:43 ex3.txt
