@@ -1,0 +1,3 @@
+12887687960 has 2 hard links
+	- link1
+	- file1
