@@ -1,17 +1,23 @@
 Program 1:
-
 (output)
 Hello
 Hello
-(explanations)
-
-
 
 Program 2:
-
 (output)
 Hello
 
 
-
 (explanations)
+
+When outputting to standard output using printf(), the output is usually buffered.
+The buffer is not flushed until you output a newline, call fflush(stdout) or exit the program (not through calling _exit() though).
+The standard output stream is by default "line-buffered".
+
+When the process in "Program 1" is forked, the child process inherits every part of the parent process,
+ including the unflushed output buffer. This effectively copies the unflushed buffer to each child process.
+When the process terminates, the buffers are flushed.
+It's two because fork() gives twice the number of processes you had before the fork() (2^1 = 2).
+
+WHILE in Program 2, the buffer is flushed before fork() executes, the child process inherits every part of the parent process,
+ including the flushed output buffer. This effectively copies the flushed buffer to each child process which does not print anything because it is empty

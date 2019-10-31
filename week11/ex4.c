@@ -1,96 +1,85 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <sys/mman.h>
+#include <fcntl.h>
 #include <sys/types.h>
 #include <sys/stat.h>
-#include <unistd.h>
-#include <fcntl.h>
-#include <sys/mman.h>
 #include <string.h>
+#include <unistd.h>
 
-int main(int argc, const char *argv[])
+int main()
 {
+	/* open source file*/
+	int src = open("ex1.txt", O_RDONLY);
+	if (src == -1)
+	{
+		printf("Error in opening the file 'ex1.txt'\n");
+	}
 
-    const char *text = argv[1];
-    printf("Will write text '%s'\n", text);
+	/* open destination file*/
+	int dest = open("ex1.memcpy.txt", O_RDWR | O_CREAT, (mode_t)0777);
+	if (dest == -1)
+	{
+		printf("Error in opening the file 'ex1.memcpy.txt'\n");
+	}
 
-    /* Open a file for writing.
-     *  - Creating the file if it doesn't exist.
-     *  - Truncating it to 0 size if it already exists. (not really needed)
-     *
-     * Note: "O_WRONLY" mode is not sufficient when mmaping.
-     */
+	/* get the size of the source file*/
+	struct stat src_buff;
+	if (fstat(src, &src_buff) != 0)
+	{
+		perror("Unable to get stats of the file\n");
+    	return 1;
+	}
+	size_t srcsize = src_buff.st_size;
 
-    const char *filepath = "/tmp/mmapped.bin";
+	void *in = mmap(NULL, srcsize, PROT_READ, MAP_SHARED, src, 0);
+  void *out = mmap(NULL, srcsize, PROT_WRITE | PROT_READ, MAP_SHARED, dest, 0);
 
-    int fd = open(filepath, O_RDWR | O_CREAT | O_TRUNC, (mode_t)0600);
+    if (in == MAP_FAILED){
+      close(src);
+    	perror("Could not mmap");
+    	return 1;
+  	}
 
-    if (fd == -1)
-    {
-        perror("Error opening file for writing");
-        exit(EXIT_FAILURE);
-    }
+  	if (out == MAP_FAILED){
+		  close(src);
+		  close(dest);
+    	perror("Could not mmap");
+    	return 1;
+  	}
 
-    // Stretch the file size to the size of the (mmapped) array of char
-
-    size_t textsize = strlen(text) + 1; // + \0 null character
-
-    if (lseek(fd, textsize-1, SEEK_SET) == -1)
-    {
-        close(fd);
-        perror("Error calling lseek() to 'stretch' the file");
-        exit(EXIT_FAILURE);
-    }
-
-    /* Something needs to be written at the end of the file to
-     * have the file actually have the new size.
-     * Just writing an empty string at the current file position will do.
-     *
-     * Note:
-     *  - The current position in the file is at the end of the stretched
-     *    file due to the call to lseek().
-     *  - An empty string is actually a single '\0' character, so a zero-byte
-     *    will be written at the last byte of the file.
-     */
-
-    if (write(fd, "", 1) == -1)
-    {
-        close(fd);
-        perror("Error writing last byte of the file");
-        exit(EXIT_FAILURE);
-    }
+    ftruncate(dest, srcsize);
+  	/* copy the string from source map to destination map*/
+  	memcpy(out, in, srcsize);
 
 
-    // Now the file is ready to be mmapped.
-    char *map = mmap(0, textsize, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
-    if (map == MAP_FAILED)
-    {
-        close(fd);
-        perror("Error mmapping the file");
-        exit(EXIT_FAILURE);
-    }
+  	if (msync(out, srcsize, MS_SYNC) != 0)
+  	{
+  		close(src);
+  		close(dest);
+  		printf("Could not sync.\n");
+  		return 1;
+  	}
 
-    for (size_t i = 0; i < textsize; i++)
-    {
-        printf("Writing character %c at %zu\n", text[i], i);
-        map[i] = text[i];
-    }
+  	/*unmap*/
+  	int unmap_src = munmap(in, srcsize);
+  	if (unmap_src != 0)
+  	{
+  		close(src);
+    	perror("Could not munmap the file\n");
+    	return 1;
+  	}
 
-    // Write it now to disk
-    if (msync(map, textsize, MS_SYNC) == -1)
-    {
-        perror("Could not sync the file to disk");
-    }
+  	int unmap_dest = munmap(out, srcsize);
+  	if (unmap_dest != 0)
+  	{
+  		close(dest);
+    	perror("Could not munmap the file\n");
+    	return 1;
+  	}
 
-    // Don't forget to free the mmapped memory
-    if (munmap(map, textsize) == -1)
-    {
-        close(fd);
-        perror("Error un-mmapping the file");
-        exit(EXIT_FAILURE);
-    }
+  	close(src);
+  	close(dest);
 
-    // Un-mmaping doesn't close the file, so we still need to do that.
-    close(fd);
-
-    return 0;
+	return 0;
 }
