@@ -29,11 +29,6 @@ int main(int argc, char *argv[])
   int i;
 	FILE *files[10];
 	int num_files;
-  char input[10];
-  //printf("Enter file name(path) + extension you want to use as stdin(e.g app.txt): ");
-  //scanf("%s", input);
-  //FILE *not_stdin = fopen(stdin, "r");
-
 
 	if (parse_args(argc, argv)) {
 		return 1;
