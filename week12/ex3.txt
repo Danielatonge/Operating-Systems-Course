@@ -52,7 +52,6 @@ sys		0m0.104s
 
 
 WITH SYNC
-
       1 Mb
 *With buffer size 2048:
 real	0m41.633s
