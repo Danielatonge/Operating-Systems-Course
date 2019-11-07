@@ -29,6 +29,11 @@ int main(int argc, char *argv[])
   int i;
 	FILE *files[10];
 	int num_files;
+  char input[100];
+  printf("Enter file name(path) + extension you want to use as stdin(e.g app.txt): ");
+  scanf("%s", input);
+  FILE *not_stdin = fopen(input, "r");
+
 
 	if (parse_args(argc, argv)) {
 		return 1;
@@ -46,7 +51,6 @@ int main(int argc, char *argv[])
 		}
 	}
 
-	FILE *not_stdin = fopen("ex1.c", "r");
 	while ((len = fread(&buffer[0], 1, sizeof(buffer), not_stdin)) > 0) {
 		fwrite(&buffer[0], 1, len, stdout);
 		for (i = 0; i < num_files; i++) {
