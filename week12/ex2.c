@@ -29,10 +29,10 @@ int main(int argc, char *argv[])
   int i;
 	FILE *files[10];
 	int num_files;
-  char input[100];
-  printf("Enter file name(path) + extension you want to use as stdin(e.g app.txt): ");
-  scanf("%s", input);
-  FILE *not_stdin = fopen(input, "r");
+  char input[10];
+  //printf("Enter file name(path) + extension you want to use as stdin(e.g app.txt): ");
+  //scanf("%s", input);
+  //FILE *not_stdin = fopen(stdin, "r");
 
 
 	if (parse_args(argc, argv)) {
@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
 		}
 	}
 
-	while ((len = fread(&buffer[0], 1, sizeof(buffer), not_stdin)) > 0) {
+	while ((len = fread(&buffer[0], 1, sizeof(buffer), stdin)) > 0) {
 		fwrite(&buffer[0], 1, len, stdout);
 		for (i = 0; i < num_files; i++) {
 			fwrite(&buffer[0], 1, len, files[i]);

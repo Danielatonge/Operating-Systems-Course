@@ -1,0 +1,73 @@
+WITHOUT SYNC
+The bigger the file, the more time it takes to copy.
+However, the larger the buffer, the less time it takes.
+
+      1 Mb
+*With buffer size 256:
+real	0m0.002s
+user	0m0.004s
+sys		0m0.008s
+
+*With buffer size 2048:
+real	0m0.002s
+user	0m0.000s
+sys		0m0.002s
+
+*With buffer size 16384:
+real	0m0.002s
+user	0m0.002s
+sys		0m0.000s
+
+      10 MB
+*With buffer size 256:
+real	0m0.019s
+user	0m0.005s
+sys		0m0.000s
+
+*With buffer size 2048:
+real	0m0.012s
+user	0m0.002s
+sys		0m0.010s
+
+*With buffer size 16384:
+real	0m0.010s
+user	0m0.000s
+sys		0m0.004s
+
+      100 MB
+*With buffer size 256:
+real	0m0.984s
+user	0m0.208s
+sys		0m0.776s
+
+*With buffer size 2048:
+real	0m0.469s
+user	0m0.012s
+sys		0m0.170s
+
+*With buffer size 16384:
+real	0m0.397s
+user	0m0.008s
+sys		0m0.104s
+
+
+WITH SYNC
+
+      1 Mb
+*With buffer size 2048:
+real	0m41.633s
+user	0m0.000s
+sys		0m0.152s
+
+*With buffer size 16384:
+real	0m3.409s
+user	0m0.003s
+sys		0m0.028s
+
+      10 MB
+*With buffer size 16384:
+real	1m15.403s
+user	0m0.010s
+sys		0m0.109s
+
+Comparing the entire results, it can be said that with sync the time taken is MUCH GREATER than without sync. This is because sync waits for the changes to be written to disk first, and that causes a lot of time.
