@@ -1,0 +1,37 @@
+Recovery:
+	• This strategy is better than other strategies in cases of real-time Operating Systems.
+
+	• There are three basic approaches to recovery from deadlock:
+		- Inform the system operator, and allow him/her to take manual intervention.
+		- Killing the process: killing all the process involved in the deadlock. Killing process one by one. After killing each process check for deadlock again keep repeating the process till system recover from deadlock.
+		- Resource Preemption: Resources are preempted from the processes involved in the deadlock, preempted resources are allocated to other processes so that there is a possibility of recovering the system from deadlock. In this case, the system goes into starvation.
+
+Prevention:
+	• Deadlocks can be prevented by preventing at least one of the four required conditions:
+		* Mutual exclusion
+		* Hold and Wait
+		* No Preemption
+		* Circular Wait
+
+	• This technique is best suited for cases where all resources are requested at once.
+
+	• The goal is to ensure that at least one of the necessary conditions for deadlock can never hold.
+
+	• Deadlock prevention is often impossible to implement.
+
+	• The system does not require additional information regarding the overall potential use of each resource for each process.
+
+	• Example of deadlock prevention techniques include non-blocking synchronization algorithms, Dijkstra's algorithm etc.
+
+Avoidance:
+	• Avoidance may be better than other strategies if there is no preemption.
+
+	• The goal for deadlock avoidance is for the system not to enter an unsafe state.
+
+	• Deadlock avoidance is often impossible to implement as the system requires additional information
+
+	• In order for the system to be able to figure out whether the next state will be safe or unsafe, it MUST know in advance at any time the number and type of all resources in existence, available, and requested.
+
+	• An example of deadlock avoidance techniques include Banker’s algorithm.
+
+NOTE: Deadlock Prevention is more strict that Deadlock Avoidance.
